@@ -1,0 +1,12 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secretos y llaves
+.env
+*.pem
+
+# Planes y notas de trabajo (no van al repo)
+docs/

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acortador de enlaces</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Acortador de enlaces</h1>
+      <p class="muted">Pega una URL larga y obtén un enlace corto que redirige al destino original.</p>
+
+      <form id="form" novalidate>
+        <label for="url">URL original</label>
+        <div class="row">
+          <input id="url" type="url" placeholder="https://www.ejemplo.com/una/ruta/larga" autocomplete="off" required />
+          <button id="enviar" type="submit">Acortar</button>
+        </div>
+      </form>
+
+      <p id="error" class="error" role="alert" hidden></p>
+
+      <section id="resultado" hidden>
+        <label for="corto">Enlace corto</label>
+        <div class="row">
+          <input id="corto" type="text" readonly />
+          <button id="copiar" type="button">Copiar</button>
+        </div>
+        <p class="muted small">
+          <a id="abrir" href="#" target="_blank" rel="noopener">Abrir enlace corto</a>
+          · <span id="aviso"></span>
+        </p>
+      </section>
+    </main>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
